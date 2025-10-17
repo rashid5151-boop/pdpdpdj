@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Вход администратора — ОБУВЬ</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		.admin-login-container {
+			background: linear-gradient(135deg, rgba(255,95,162,.08), rgba(255,95,162,.03));
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+		
+		.admin-login-card {
+			background: var(--white);
+			border-radius: 20px;
+			padding: 40px;
+			box-shadow: var(--shadow-lg);
+			border: 2px solid var(--pink-100);
+			max-width: 400px;
+			width: 100%;
+		}
+		
+		.admin-logo {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		
+		.admin-logo .logo-icon {
+			width: 60px;
+			height: 60px;
+			border-radius: 16px;
+			background: linear-gradient(135deg, var(--pink-500), var(--pink-600));
+			display: grid;
+			place-items: center;
+			margin: 0 auto 16px;
+			font-size: 24px;
+			font-weight: 900;
+			color: var(--white);
+		}
+		
+		.admin-logo h1 {
+			margin: 0;
+			color: var(--pink-600);
+			font-size: 24px;
+		}
+		
+		.admin-logo p {
+			margin: 8px 0 0;
+			color: var(--gray-500);
+			font-size: 14px;
+		}
+		
+		.admin-form .input {
+			margin-bottom: 16px;
+		}
+		
+		.admin-form .btn {
+			width: 100%;
+			padding: 14px;
+			font-size: 16px;
+			font-weight: 700;
+		}
+		
+		.admin-security-note {
+			background: var(--pink-50);
+			border: 1px solid var(--pink-200);
+			border-radius: 12px;
+			padding: 16px;
+			margin-top: 20px;
+			text-align: center;
+		}
+		
+		.admin-security-note p {
+			margin: 0;
+			color: var(--gray-600);
+			font-size: 13px;
+			line-height: 1.4;
+		}
+		
+		.back-link {
+			text-align: center;
+			margin-top: 20px;
+		}
+		
+		.back-link a {
+			color: var(--gray-500);
+			text-decoration: none;
+			font-size: 14px;
+			transition: color 0.2s ease;
+		}
+		
+		.back-link a:hover {
+			color: var(--pink-600);
+		}
+	</style>
+</head>
+<body>
+	<div class="admin-login-container">
+		<div class="admin-login-card">
+			<div class="admin-logo">
+				<div class="logo-icon">👑</div>
+				<h1>Админ-панель</h1>
+				<p>Доступ только для администраторов</p>
+			</div>
+			
+			<form id="adminLoginForm" class="admin-form">
+				<input class="input" id="adminEmail" type="email" placeholder="Email администратора" required>
+				<input class="input" id="adminPassword" type="password" placeholder="Пароль администратора" required>
+				<button class="btn" type="submit">Войти как администратор</button>
+			</form>
+			
+			<div id="adminErrorMessage" class="error-message" style="display: none; margin-top: 12px; padding: 8px 12px; background: #fee2e2; color: #dc2626; border-radius: 8px; font-size: 14px;"></div>
+			
+			<div class="admin-security-note">
+				<p><strong>🔒 Безопасность:</strong> Доступ к админ-панели ограничен. Неверные попытки входа логируются.</p>
+			</div>
+			
+			<div class="back-link">
+				<a href="index.html">← Вернуться на главную</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/auth.js"></script>
+	<script src="js/admin-auth.js"></script>
+</body>
+</html>

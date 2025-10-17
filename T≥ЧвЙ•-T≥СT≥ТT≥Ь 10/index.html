@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ОБУВЬ — Магазин обуви</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="index.html">
+				<span class="logo">О</span>
+				<span>ОБУВЬ</span>
+			</a>
+			<nav class="nav">
+				<div class="nav-links">
+					<a href="index.html" class="active">Главная</a>
+					<a href="catalog.html">Каталог</a>
+					<a href="about.html">О нас</a>
+					<a href="delivery.html">Доставка</a>
+					<a href="contacts.html">Контакты</a>
+					<a href="faq.html">Вопросы</a>
+					<a href="admin-login.html" title="Админ">Админ</a>
+					<a href="login.html">Вход</a>
+					<a href="register.html">Регистрация</a>
+					<button class="btn cart-btn" onclick="cart.toggleCart()" title="Корзина">
+						🛒 <span id="cartCount" class="cart-count" style="display: none;">0</span>
+					</button>
+				</div>
+				<button class="btn menu-toggle" id="menuToggle" aria-label="Меню">Меню</button>
+			</nav>
+		</div>
+		<!-- Мобильное меню -->
+		
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<div>
+					<span class="badge">Новая коллекция</span>
+					<h1>ОБУВЬ — стиль и комфорт каждый день</h1>
+					<p>Выбирайте из тщательно подобранной коллекции кроссовок, ботинок и туфель. Розово-белая эстетика, быстрый сервис и забота о клиентах.</p>
+					<div>
+						<a class="btn" href="catalog.html">Перейти в каталог</a>
+						<a class="btn outline" href="about.html">Узнать о нас</a>
+					</div>
+				</div>
+				<div>
+					<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop" alt="Кроссовки">
+				</div>
+			</div>
+		</section>
+
+		<section class="section sneakers-promotions-section">
+			<div class="container">
+				<h2>🔥 Акции кроссовок</h2>
+				<p class="lead">Специальные предложения на кроссовки и спортивную обувь</p>
+				<div class="promotions-grid" id="sneakersPromotionsGrid">
+					<div class="promotion-card">
+						<div class="promotion-badge">-30%</div>
+						<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop" alt="Кроссовки Air Flex Pink со скидкой">
+						<div class="promotion-content">
+							<h3>Air Flex Pink</h3>
+							<p>Скидка 30% на лёгкие кроссовки для повседневных прогулок</p>
+							<div class="promotion-price">
+								<span class="old-price">9 990 ₽</span>
+								<span class="new-price">6 990 ₽</span>
+							</div>
+							<button class="btn" onclick="addToCartFromPromo('s1')">В корзину</button>
+						</div>
+					</div>
+					<div class="promotion-card">
+						<div class="promotion-badge">-25%</div>
+						<img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=1000&auto=format&fit=crop" alt="Кроссовки Urban Runner со скидкой">
+						<div class="promotion-content">
+							<h3>Urban Runner</h3>
+							<p>Скидка 25% на городские кроссовки с амортизацией</p>
+							<div class="promotion-price">
+								<span class="old-price">10 120 ₽</span>
+								<span class="new-price">7 590 ₽</span>
+							</div>
+							<button class="btn" onclick="addToCartFromPromo('s2')">В корзину</button>
+						</div>
+					</div>
+					<div class="promotion-card">
+						<div class="promotion-badge">-20%</div>
+						<img src="https://images.unsplash.com/photo-1546470427-e261d63a9f39?q=80&w=1000&auto=format&fit=crop" alt="Кроссовки RunLite 2.0 со скидкой">
+						<div class="promotion-content">
+							<h3>RunLite 2.0</h3>
+							<p>Скидка 20% на беговые кроссовки с поддержкой свода стопы</p>
+							<div class="promotion-price">
+								<span class="old-price">9 990 ₽</span>
+								<span class="new-price">7 990 ₽</span>
+							</div>
+							<button class="btn" onclick="addToCartFromPromo('s7')">В корзину</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section new-sneakers-section">
+			<div class="container">
+				<h2>✨ Новые кроссовки в продаже</h2>
+				<p class="lead">Свежие модели кроссовок только что поступили в продажу</p>
+				<div class="grid" id="newSneakersGrid">
+					<!-- Новые кроссовки будут загружены динамически -->
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Хиты продаж</h2>
+				<p class="lead">Подборка популярных моделей недели</p>
+				<div class="grid" id="hitsGrid"></div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="banner">
+					<strong>Бесплатная доставка</strong> по РФ при заказе от 5000 ₽. Обмен и возврат — 14 дней.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-top">
+			<div class="footer-grid">
+				<div class="footer-col">
+					<a class="brand" href="index.html"><span class="logo">О</span><span>ОБУВЬ</span></a>
+					<p>Мы — магазин «ОБУВЬ». С 2018 года помогаем людям выбирать удобные и красивые пары на каждый день и для особых случаев.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Навигация</h4>
+					<a href="catalog.html">Каталог</a><br>
+					<a href="about.html">О нас</a><br>
+					<a href="delivery.html">Доставка</a><br>
+					<a href="contacts.html">Контакты</a>
+				</div>
+				<div class="footer-col">
+					<h4>Поддержка</h4>
+					<a href="faq.html">FAQ</a><br>
+					<a href="https://t.me/your_shoes_shop_bot" target="_blank" rel="noopener">Телеграм бот</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">© <span id="year"></span> ОБУВЬ. Все права защищены.</div>
+		</div>
+	</footer>
+
+	<!-- Модальное окно корзины -->
+	<div id="cartModal" class="cart-modal">
+		<div class="cart-modal-content">
+			<div class="cart-header">
+				<h3>Корзина</h3>
+				<button class="cart-close" onclick="cart.toggleCart()" title="Закрыть">×</button>
+			</div>
+			<div id="cartContent" class="cart-content">
+				<!-- Содержимое корзины будет загружено динамически -->
+			</div>
+		</div>
+	</div>
+
+	<script src="js/data.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/auth.js"></script>
+</body>
+</html>
+

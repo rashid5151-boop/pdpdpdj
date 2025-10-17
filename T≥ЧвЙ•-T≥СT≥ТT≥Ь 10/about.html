@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>О нас — ОБУВЬ</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="index.html">
+				<span class="logo">О</span>
+				<span>ОБУВЬ</span>
+			</a>
+			<nav class="nav">
+				<div class="nav-links">
+					<a href="index.html">Главная</a>
+					<a href="catalog.html">Каталог</a>
+					<a href="about.html" class="active">О нас</a>
+					<a href="delivery.html">Доставка</a>
+					<a href="contacts.html">Контакты</a>
+					<a href="faq.html">Вопросы</a>
+					<a href="admin-login.html">Админ</a>
+					<a href="login.html">Вход</a>
+					<a href="register.html">Регистрация</a>
+				</div>
+				<button class="btn menu-toggle" id="menuToggle" aria-label="Меню">Меню</button>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<div>
+					<span class="badge">С 2018 года</span>
+					<h1>О «ОБУВЬ»: любовь к комфорту и стилю</h1>
+					<p>Мы верим, что правильная пара обуви делает день лучше. В нашем магазине собраны модели для города, спорта и особых случаев. Мы тщательно отбираем бренды и следим за трендами, чтобы вы получали качество и актуальный дизайн.</p>
+				</div>
+				<div>
+					<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop" alt="О магазине">
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Наши ценности</h2>
+				<div class="grid">
+					<div class="card"><div class="card-body"><strong>Качество</strong><br>Работаем только с проверенными поставщиками. Каждая модель проходит проверку перед отгрузкой.</div></div>
+					<div class="card"><div class="card-body"><strong>Сервис</strong><br>Быстрая доставка по РФ, понятные условия обмена и возврата, консультанты на связи.</div></div>
+					<div class="card"><div class="card-body"><strong>Честность</strong><br>Прозрачные цены, без скрытых платежей. Реальные фотографии и описания.</div></div>
+					<div class="card"><div class="card-body"><strong>Стиль</strong><br>Аккуратная розово-белая эстетика, трендовые модели, приятные детали.</div></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Как мы работаем</h2>
+				<div class="info">
+					<p><strong>1. Подбор коллекции.</strong> Ежемесячно обновляем каталог. Следим за трендами и отзывами клиентов.</p>
+					<p><strong>2. Проверка и хранение.</strong> Склад с контролем условий, чтобы обувь сохраняла форму и внешний вид.</p>
+					<p><strong>3. Доставка.</strong> Отправляем день-в-день при заказе до 15:00. Бесплатно от 5000 ₽.</p>
+					<p><strong>4. Поддержка.</strong> На связи в Telegram. Поможем с размером, уходом, возвратом.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Цифры</h2>
+				<div class="grid">
+					<div class="card"><div class="card-body"><strong>30 000+</strong><br>Доставленных пар</div></div>
+					<div class="card"><div class="card-body"><strong>1 500+</strong><br>Положительных отзывов</div></div>
+					<div class="card"><div class="card-body"><strong>48 ч</strong><br>Средний срок доставки</div></div>
+					<div class="card"><div class="card-body"><strong>14 дней</strong><br>Обмен и возврат</div></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-top">
+			<div class="footer-grid">
+				<div class="footer-col">
+					<a class="brand" href="index.html"><span class="logo">О</span><span>ОБУВЬ</span></a>
+					<p>Мы — магазин «ОБУВЬ». С 2018 года помогаем людям выбирать удобные и красивые пары на каждый день и для особых случаев.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Навигация</h4>
+					<a href="catalog.html">Каталог</a><br>
+					<a href="about.html">О нас</a><br>
+					<a href="delivery.html">Доставка</a><br>
+					<a href="contacts.html">Контакты</a>
+				</div>
+				<div class="footer-col">
+					<h4>Поддержка</h4>
+					<a href="faq.html">FAQ</a><br>
+					<a href="https://t.me/your_shoes_shop_bot" target="_blank" rel="noopener">Телеграм бот</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">© <span id="year"></span> ОБУВЬ. Все права защищены.</div>
+		</div>
+	</footer>
+
+	<script src="js/data.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/auth.js"></script>
+</body>
+</html>
+

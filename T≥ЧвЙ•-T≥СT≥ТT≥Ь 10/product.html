@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Товар — ОБУВЬ</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="index.html">
+				<span class="logo">О</span>
+				<span>ОБУВЬ</span>
+			</a>
+			<nav class="nav">
+				<div class="nav-links">
+					<a href="index.html">Главная</a>
+					<a href="catalog.html" class="active">Каталог</a>
+					<a href="about.html">О нас</a>
+					<a href="delivery.html">Доставка</a>
+					<a href="contacts.html">Контакты</a>
+					<a href="faq.html">Вопросы</a>
+					<a href="admin-login.html">Админ</a>
+					<a href="login.html">Вход</a>
+					<a href="register.html">Регистрация</a>
+				</div>
+				<button class="btn menu-toggle" id="menuToggle" aria-label="Меню">Меню</button>
+			</nav>
+		</div>
+		<div class="mobile-menu" id="mobileMenu">
+			<div class="container">
+				<a href="index.html">Главная</a>
+				<a href="catalog.html" class="active">Каталог</a>
+				<a href="about.html">О нас</a>
+				<a href="delivery.html">Доставка</a>
+				<a href="contacts.html">Контакты</a>
+				<a href="faq.html">Вопросы</a>
+				<a href="admin.html">Админ</a>
+				<a href="login.html">Вход</a>
+				<a href="register.html">Регистрация</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="section">
+			<div class="container" id="productContainer"></div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2>Похожие модели</h2>
+				<div class="grid" id="relatedGrid"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-top">
+			<div class="footer-grid">
+				<div class="footer-col">
+					<a class="brand" href="index.html"><span class="logo">О</span><span>ОБУВЬ</span></a>
+					<p>Мы — магазин «ОБУВЬ». С 2018 года помогаем людям выбирать удобные и красивые пары на каждый день и для особых случаев.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Навигация</h4>
+					<a href="catalog.html">Каталог</a><br>
+					<a href="about.html">О нас</a><br>
+					<a href="delivery.html">Доставка</a><br>
+					<a href="contacts.html">Контакты</a>
+				</div>
+				<div class="footer-col">
+					<h4>Поддержка</h4>
+					<a href="faq.html">FAQ</a><br>
+					<a href="https://t.me/your_shoes_shop_bot" target="_blank" rel="noopener">Телеграм бот</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">© <span id="year"></span> ОБУВЬ. Все права защищены.</div>
+		</div>
+	</footer>
+
+	<script src="js/data.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/product.js"></script>
+</body>
+</html>
+
